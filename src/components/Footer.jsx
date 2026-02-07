@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#000000] text-[#737373] pt-16 pb-8">
+    <footer className="bg-[#404040] text-[#737373] pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
 
         {/* Brand Column */}
@@ -20,7 +20,7 @@ export default function Footer() {
                 key={i}
                 className="
                   w-10 h-10
-                  bg-[#404040]
+                  bg-[#737373]
                   rounded-lg
                   flex items-center justify-center
                   cursor-pointer
@@ -46,7 +46,7 @@ export default function Footer() {
               (item, i) => (
                 <li
                   key={i}
-                  className="hover:text-[#A5D8FF] cursor-pointer transition-all"
+                  className="hover:text-[#3B82F6] cursor-pointer transition-all"
                 >
                   {item}
                 </li>
@@ -64,7 +64,7 @@ export default function Footer() {
               (item, i) => (
                 <li
                   key={i}
-                  className="hover:text-[#D0BCFF] cursor-pointer transition-all"
+                  className="hover:text-[#3B82F6] cursor-pointer transition-all"
                 >
                   {item}
                 </li>
@@ -87,7 +87,7 @@ export default function Footer() {
             ].map((item, i) => (
               <li
                 key={i}
-                className="hover:text-[#B197FC] cursor-pointer transition-all"
+                className="hover:text-[#3B82F6] cursor-pointer transition-all"
               >
                 {item}
               </li>
@@ -97,7 +97,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto px-6 mt-12 border-t border-[#404040] pt-6 flex flex-col md:flex-row justify-between text-sm">
+      <div className="max-w-7xl mx-auto px-6 mt-12 border-t border-[#737373] pt-6 flex flex-col md:flex-row justify-between text-sm">
         <p>
           © 2026 RecruiterAI by OneSol AI Labs. All rights reserved.
         </p>
@@ -106,7 +106,7 @@ export default function Footer() {
           {["Privacy", "Terms", "Cookies"].map((item, i) => (
             <span
               key={i}
-              className="hover:text-[#A5D8FF] cursor-pointer transition-all"
+              className="hover:text-[#3B82F6] cursor-pointer transition-all"
             >
               {item}
             </span>
