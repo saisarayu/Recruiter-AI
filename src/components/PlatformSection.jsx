@@ -15,7 +15,7 @@ export default function PlatformSection() {
   ];
 
   return (
-    <section className="bg-black py-24 overflow-hidden">
+    <section id="solution" className="bg-black py-24 overflow-hidden">
       <div className="text-center px-6">
         <h2 className="text-5xl font-bold text-white">
           Post Once, <span className="text-[#9F7AEA]">Reach Everywhere</span>

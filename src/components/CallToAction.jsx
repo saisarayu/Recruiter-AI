@@ -13,6 +13,7 @@ export default function CallToAction() {
 
   return (
     <section
+      id="cta"
       ref={ref}
       className="relative overflow-hidden py-24 bg-[#000000]"
     >

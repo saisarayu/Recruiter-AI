@@ -36,6 +36,7 @@ export default function FAQSection() {
 
   return (
     <section
+      id="faq"
       ref={ref}
       className="relative overflow-hidden py-24 px-6"
       style={{
