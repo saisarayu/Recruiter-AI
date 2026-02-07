@@ -6,7 +6,7 @@ export default function TestimonialsSection() {
   return (
     <section id="testimonials">
       <TestimonialBackground>
-        <div className="flex items-start gap-16">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 px-4 md:px-0">
           <TestimonialHeader />
           <TestimonialsGrid />
         </div>
