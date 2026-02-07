@@ -20,22 +20,26 @@ export default function RecruiterAIWorkflows() {
         >
           <Step text="New Application Submitted" />
 
-          <Step
-            text="AI Resume Screening"
-            sub="Ranks top 20% of candidates"
-          />
+          <ArrowConnector />
 
-          <Step
-            text="Auto-send Screening Questions"
-            sub="Via email"
-          />
+          <Step text="AI Resume Screening" sub="Ranks top 20% of candidates" />
+
+          <ArrowConnector />
+
+          <Step text="Auto-send Screening Questions" sub="Via email" />
+
+          <ArrowConnector />
 
           <Decision text="Score > 75% ?" />
+
+          <ArrowConnector />
 
           <YesNo
             yes="Auto-schedule Interview"
             no="Thank You Email + Talent Pool"
           />
+
+          <ArrowConnector />
 
           <Step text="Send 24h Interview Reminder" />
         </FlowWrapper>
@@ -48,24 +52,30 @@ export default function RecruiterAIWorkflows() {
         >
           <Step text="Candidate Accepts Interview Invite" />
 
-          <Step
-            text="Round 1: AI Video Interview"
-            sub="Technical screening"
-          />
+          <ArrowConnector />
 
-          <Step
-            text="AI Scores Responses"
-            sub="Custom rubric"
-          />
+          <Step text="Round 1: AI Video Interview" sub="Technical screening" />
+
+          <ArrowConnector />
+
+          <Step text="AI Scores Responses" sub="Custom rubric" />
+
+          <ArrowConnector />
 
           <Decision text="Score > 80% ?" />
+
+          <ArrowConnector />
 
           <YesNo
             yes="Schedule Round 2 with Hiring Manager"
             no="Auto-Rejection Email with Feedback"
           />
 
+          <ArrowConnector />
+
           <Decision text="Hire or Reject?" />
+
+          <ArrowConnector />
 
           <YesNo
             yes="Send Offer Letter + Welcome Kit"
@@ -81,21 +91,30 @@ export default function RecruiterAIWorkflows() {
         >
           <Step text="Rejected Candidate (60-74% Score)" />
 
+          <ArrowConnector />
+
           <Step text="Add to Future Talent Database" />
 
-          <Step
-            text="Wait 3 Months"
-            sub="Automated patience period"
-          />
+          <ArrowConnector />
+
+          <Step text="Wait 3 Months" sub="Automated patience period" />
+
+          <ArrowConnector />
 
           <Decision text="New Position Opens?" />
+
+          <ArrowConnector />
 
           <YesNo
             yes="Send Personalized Re-engagement Email"
             no="Check Again Next Quarter"
           />
 
+          <ArrowConnector />
+
           <Decision text="Interested?" />
+
+          <ArrowConnector />
 
           <YesNo
             yes="Fast-track to Interview Stage"
@@ -130,7 +149,7 @@ function FlowWrapper({ title, benefit, children }) {
         {title}
       </h3>
 
-      <div className="flex flex-col items-center gap-4 w-full">
+      <div className="flex flex-col items-center gap-2 w-full">
         {children}
       </div>
 
@@ -247,6 +266,17 @@ function YesNo({ yes, no }) {
         {no}
       </div>
 
+    </div>
+  );
+}
+
+
+function ArrowConnector() {
+  return (
+    <div className="flex flex-col items-center">
+      <div className="w-[2px] h-3 bg-gray-400"></div>
+      <div className="text-gray-400 text-lg leading-none">↓</div>
+      <div className="w-[2px] h-3 bg-gray-400"></div>
     </div>
   );
 }
