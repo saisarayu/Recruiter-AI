@@ -1,17 +1,17 @@
 export default function RecruiterAIWorkflows() {
   return (
-    <section className="bg-[#000000] py-24 text-white">
+    <section className="bg-[#000000] py-16 text-white">
       <div className="text-center px-6">
-        <h2 className="text-5xl font-bold text-white">
+        <h2 className="text-4xl font-bold text-white">
           AI Recruiting Software That Works Like Your Own HR Team
         </h2>
 
-        <p className="mt-4 text-[#737373]">
+        <p className="mt-3 text-[#737373] text-sm">
           Build custom hiring workflows in minutes. No coding required.
         </p>
       </div>
 
-      <div className="mt-14 max-w-7xl mx-auto grid md:grid-cols-3 gap-10 px-6">
+      <div className="mt-10 max-w-7xl mx-auto grid md:grid-cols-3 gap-6 px-6">
 
         {/* FLOWCHART 1 */}
         <FlowWrapper
@@ -135,25 +135,25 @@ function FlowWrapper({ title, benefit, children }) {
     <div
       className="
         bg-[#404040]
-        rounded-2xl
-        p-6
+        rounded-xl
+        p-4
         flex flex-col
         items-center
-        shadow-lg
+        shadow-md
         transition-all
         duration-300
-        hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]
+        hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]
       "
     >
-      <h3 className="text-lg font-semibold text-[#A5D8FF] mb-4 text-center">
+      <h3 className="text-sm font-semibold text-[#A5D8FF] mb-2 text-center">
         {title}
       </h3>
 
-      <div className="flex flex-col items-center gap-2 w-full">
+      <div className="flex flex-col items-center gap-1 w-full">
         {children}
       </div>
 
-      <p className="mt-6 text-sm text-[#B197FC] text-center">
+      <p className="mt-3 text-[10px] text-[#B197FC] text-center">
         {benefit}
       </p>
     </div>
@@ -168,18 +168,18 @@ function Step({ text, sub }) {
         w-full
         bg-[#3B82F6]
         text-white
-        p-4
-        rounded-xl
+        p-2
+        rounded-md
         text-center
         transition-all
         duration-300
-        hover:scale-[1.03]
-        hover:shadow-lg
+        hover:scale-[1.02]
+        hover:shadow-md
         cursor-pointer
       "
     >
-      <div>{text}</div>
-      {sub && <div className="text-xs mt-1 opacity-80">{sub}</div>}
+      <div className="text-xs">{text}</div>
+      {sub && <div className="text-[9px] mt-0.5 opacity-80">{sub}</div>}
     </div>
   );
 }
@@ -187,22 +187,22 @@ function Step({ text, sub }) {
 
 function Decision({ text }) {
   return (
-    <div className="relative my-4 flex items-center justify-center">
+    <div className="relative my-2 flex items-center justify-center">
       <div
         className="
-          w-[140px]
-          h-[140px]
+          w-[90px]
+          h-[90px]
           bg-[#D0BCFF]
           rotate-45
-          rounded-2xl
+          rounded-lg
           flex
           items-center
           justify-center
-          shadow-md
+          shadow-sm
           transition-all
           duration-300
           hover:scale-105
-          hover:shadow-[0_0_20px_rgba(208,188,255,0.6)]
+          hover:shadow-[0_0_10px_rgba(208,188,255,0.6)]
           cursor-pointer
         "
       >
@@ -212,8 +212,8 @@ function Decision({ text }) {
             text-black
             text-center
             font-bold
-            text-base
-            px-3
+            text-[10px]
+            px-2
           "
         >
           {text}
@@ -226,21 +226,21 @@ function Decision({ text }) {
 
 function YesNo({ yes, no }) {
   return (
-    <div className="w-full flex gap-4">
+    <div className="w-full flex gap-2">
 
       <div
         className="
           flex-1
           bg-[#3B82F6]
           text-white
-          p-3
-          rounded-lg
+          p-2
+          rounded-md
           text-center
-          text-sm
+          text-[10px]
           transition-all
           duration-300
           hover:scale-105
-          hover:shadow-lg
+          hover:shadow-md
           cursor-pointer
         "
       >
@@ -252,14 +252,14 @@ function YesNo({ yes, no }) {
           flex-1
           bg-[#737373]
           text-white
-          p-3
-          rounded-lg
+          p-2
+          rounded-md
           text-center
-          text-sm
+          text-[10px]
           transition-all
           duration-300
           hover:scale-105
-          hover:shadow-lg
+          hover:shadow-md
           cursor-pointer
         "
       >
@@ -274,9 +274,9 @@ function YesNo({ yes, no }) {
 function ArrowConnector() {
   return (
     <div className="flex flex-col items-center">
-      <div className="w-[2px] h-3 bg-gray-400"></div>
-      <div className="text-gray-400 text-lg leading-none">↓</div>
-      <div className="w-[2px] h-3 bg-gray-400"></div>
+      <div className="w-[2px] h-2 bg-gray-400"></div>
+      <div className="text-gray-400 text-xs leading-none">↓</div>
+      <div className="w-[2px] h-2 bg-gray-400"></div>
     </div>
   );
 }
